@@ -1,7 +1,39 @@
 .time-ribbon {
-  background-image: url('../../images/time-scale.svg');
-  background-position: left bottom;
-  background-repeat: repeat-x;
-
   height: 100%;
+  padding: 0 16rem;
+  
+  position: absolute;
+  left: 1000px;
+
+  &-spacer {
+    background: #00488e;
+    width: calc(730px - 30px);
+    height: 100%;
+    float: left;
+    position: relative;
+  }
+
+  &-container {
+    height: 100%;
+  }
+
+  &-ruler {
+    background-image: url('../../images/time-scale.svg');
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &-years {
+    font-family: 'Oswald';
+    font-size: 3rem;
+    font-weight: 400;
+
+    &-marker {
+      position: absolute;
+      bottom: 3%;
+      width: 6rem;
+    }
+  }
 }
