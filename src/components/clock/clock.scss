@@ -1,32 +1,26 @@
 .clock {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
 
-  &-unit {
+  &-time {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 2.4rem;
+  }
 
-    &-number {
-      font-size: 4rem;
-      font-weight: 600;
-    }
+  &-title {
+    text-align: center;
+    font-size: 3.2rem;
+  }
 
-    &-descriptor {
-      font-size: 0.8rem;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
+  &-unit-seperator {
+    font-size: 3.5rem;
+    font-weight: 600;
 
-    &-seperator {
-      font-size: 3.5rem;
-      font-weight: 600;
-
-      &-base {
-        height: 1.2rem;
-      }
+    &-base {
+      height: 1.2rem;
     }
   }
 }

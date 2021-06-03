@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { calculateTime } from './calculateTime'
+import { ClockUnit } from './components'
 import './clock.scss'
 
 interface Props {
   startTime: Date
+  title: string
 }
 
-export const Clock: React.FC<Props> = ({ startTime }) => {
+export const Clock: React.FC<Props> = ({ startTime, title }) => {
   const [timeDiff, setTimeDiff] = useState(calculateTime(startTime))
 
   useEffect(() => {
@@ -20,47 +22,23 @@ export const Clock: React.FC<Props> = ({ startTime }) => {
 
   return (
     <div className="clock">
-      <div className="clock-unit">
-        <span className="clock-unit-number">{timeDiff.years}</span>
-        <span className="clock-unit-descriptor">years</span>
-      </div>
-      <div className="clock-unit">
-        <span className="clock-unit-number">
-          {timeDiff.months < 10 ? `0${timeDiff.months}` : timeDiff.months}
-        </span>
-        <span className="clock-unit-descriptor">months</span>
-      </div>
-      <div className="clock-unit">
-        <span className="clock-unit-number">{timeDiff.days}</span>
-        <span className="clock-unit-descriptor">days</span>
-      </div>
-      <div className="clock-unit">
-        <span className="clock-unit-number">{timeDiff.hours}</span>
-        <span className="clock-unit-descriptor">hours</span>
-      </div>
+      <p className="clock-title">{title}</p>
 
-      <div className="clock-unit">
-        <span className="clock-unit-seperator">:</span>
-        <div className="clock-unit-seperator-base" />
-      </div>
-
-      <div className="clock-unit">
-        <span className="clock-unit-number">{timeDiff.minutes}</span>
-        <span className="clock-unit-descriptor">minutes</span>
-      </div>
-
-      <div className="clock-unit">
-        <span className="clock-unit-seperator">:</span>
-        <div className="clock-unit-seperator-base" />
-      </div>
-
-      <div className="clock-unit">
-        <span className="clock-unit-number">
-          {timeDiff.seconds < 10
-            ? `0${Math.floor(timeDiff.seconds)}`
-            : Math.floor(timeDiff.seconds)}
-        </span>
-        <span className="clock-unit-descriptor">seconds</span>
+      <div className="clock-time">
+        <ClockUnit time={timeDiff.years} unit="years" />
+        <ClockUnit time={timeDiff.months} unit="months" />
+        <ClockUnit time={timeDiff.days} unit="days" />
+        <ClockUnit time={timeDiff.hours} unit="minutes" />
+        <div className="clock-unit">
+          <span className="clock-unit-seperator">:</span>
+          <div className="clock-unit-seperator-base" />
+        </div>
+        <ClockUnit time={timeDiff.minutes} unit="seconds" />
+        <div className="clock-unit">
+          <span className="clock-unit-seperator">:</span>
+          <div className="clock-unit-seperator-base" />
+        </div>
+        <ClockUnit time={timeDiff.seconds} unit="seconds" />
       </div>
     </div>
   )

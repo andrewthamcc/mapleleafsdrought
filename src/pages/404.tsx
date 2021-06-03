@@ -1,15 +1,13 @@
 import * as React from 'react'
-import { PageProps } from 'gatsby'
+import Layout from '../layout'
 import { Link } from 'gatsby'
 
-// markup
-const NotFoundPage: React.FC<PageProps> = () => {
+const NotFoundPage: React.FC = () => {
   return (
-    <main>
-      <title>Not found</title>
-      <h1>Page not found</h1>
+    <Layout title="Not Found">
+      <h1>404 Page not found</h1>
       <Link to="/">Go home</Link>.
-    </main>
+    </Layout>
   )
 }
 
