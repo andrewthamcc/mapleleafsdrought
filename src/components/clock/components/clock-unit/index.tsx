@@ -3,7 +3,7 @@ import './clock-unit.scss'
 
 interface Props {
   time?: number
-  unit: 'years' | 'months' | 'days' | 'minutes' | 'seconds'
+  unit: 'years' | 'months' | 'days' | 'hours' | 'minutes' | 'seconds'
 }
 
 export const ClockUnit: React.FC<Props> = ({ time = 0, unit }) => {

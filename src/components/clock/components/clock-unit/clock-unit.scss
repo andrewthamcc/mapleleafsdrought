@@ -6,13 +6,37 @@
 
   &-number {
     font-size: 8rem;
+    min-width: 9rem;
     font-weight: 600;
     font-family: "Oswald";
+    text-align: center;
   }
 
   &-descriptor {
     font-size: 1.4rem;
     font-weight: 300;
     text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .clock-unit {
+    &-number {
+      font-size: 5rem;
+      min-width: 6rem;
+    }
+
+    &-descriptor {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .clock-unit {
+    &-number {
+      font-size: 3rem;
+      min-width: 4rem;
+    }
   }
 }

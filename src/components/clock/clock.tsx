@@ -24,21 +24,27 @@ export const Clock: React.FC<Props> = ({ startTime, title }) => {
     <div className="clock">
       <p className="clock-title">{title}</p>
 
-      <div className="clock-time">
-        <ClockUnit time={timeDiff.years} unit="years" />
-        <ClockUnit time={timeDiff.months} unit="months" />
-        <ClockUnit time={timeDiff.days} unit="days" />
-        <ClockUnit time={timeDiff.hours} unit="minutes" />
-        <div className="clock-unit">
-          <span className="clock-unit-seperator">:</span>
-          <div className="clock-unit-seperator-base" />
+      <div className="clock-counter">
+        <div className="clock-counter-flex-container">
+          <div className="clock-counter-date">
+            <ClockUnit time={timeDiff.years} unit="years" />
+            <ClockUnit time={timeDiff.months} unit="months" />
+            <ClockUnit time={timeDiff.days} unit="days" />
+          </div>
+          <div className="clock-counter-time">
+            <ClockUnit time={timeDiff.hours} unit="hours" />
+            <div className="clock-unit">
+              <span className="clock-unit-seperator">:</span>
+              <div className="clock-unit-seperator-base" />
+            </div>
+            <ClockUnit time={timeDiff.minutes} unit="minutes" />
+            <div className="clock-unit">
+              <span className="clock-unit-seperator">:</span>
+              <div className="clock-unit-seperator-base" />
+            </div>
+            <ClockUnit time={timeDiff.seconds} unit="seconds" />
+          </div>
         </div>
-        <ClockUnit time={timeDiff.minutes} unit="seconds" />
-        <div className="clock-unit">
-          <span className="clock-unit-seperator">:</span>
-          <div className="clock-unit-seperator-base" />
-        </div>
-        <ClockUnit time={timeDiff.seconds} unit="seconds" />
       </div>
     </div>
   )
