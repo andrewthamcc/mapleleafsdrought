@@ -4,12 +4,13 @@ import { TimeRibbon } from '../components'
 import ArrowRight from '../svgs/arrow-right.svg'
 import ArrowRightShort from '../svgs/arrow-right-short.svg'
 import PixelImage from '../svgs/pixel.svg'
+import { isBrowser } from '../utils'
 import './timeline.scss'
 
 const TimeLine: React.FC = () => {
   return (
     // mobile hack to avoid having to scroll to see the timeline ribbon scale
-    <div className="timeline-wrapper" style={{ height: `${window.innerHeight}px`}}> 
+    <div className="timeline-wrapper" style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100px'}`}}> 
       <Header />
       <div className="timeline">
         <div className="timeline-start">
