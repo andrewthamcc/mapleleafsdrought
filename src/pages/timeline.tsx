@@ -12,7 +12,7 @@ const TimeLine: React.FC = () => {
     // mobile hack to avoid having to scroll to see the timeline ribbon scale
     <div
       className="timeline-wrapper"
-      style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100px'}` }}
+      style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100vh'}` }}
     >
       <Header />
       <div className="timeline">

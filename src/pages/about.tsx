@@ -9,7 +9,7 @@ const About: React.FC = () => {
       <div className="about">
         <div className="container">
           <p>
-            This website was created in response to the 2021 Playoff deafeat to
+            MapleLeafsDrought was created in response to the 2021 playoff defeat to
             the Montreal Canadiens. Wanting to channel and express my
             disappointment as a life long Leaf fan I created this website to
             cope with the loss.
