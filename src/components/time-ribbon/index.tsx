@@ -25,10 +25,10 @@ export const TimeRibbon = () => {
     const windowLocation = e.target.scrollLeft
     const innerWindowWidth = document.body.clientWidth
 
-    if (windowLocation > (1860 - (innerWindowWidth / 2))) {
+    if (windowLocation > (1826 - (innerWindowWidth / 2))) { // 1826 is width of intro + spacer + left padding
       setShowDateIndicator(true)
 
-      const daysToAdd = windowLocation - (1860 - innerWindowWidth / 2)
+      const daysToAdd = windowLocation - (1826 - innerWindowWidth / 2)
       const currentDateIndicator = DateTime.fromJSDate(
         new Date('1/1/1967')
       ).plus({ days: daysToAdd })
@@ -48,7 +48,7 @@ export const TimeRibbon = () => {
       <div className="time-ribbon-spacer" />
       <div
         className="time-ribbon-container"
-        style={{ width: `calc(730px + 123px + ${difference.days}px)` }}
+        style={{ width: `calc(730px + 123px + ${difference.days}px)` }} // 2 years + days until May 2 + days until now
       >
         <div className="time-ribbon-ruler" />
 
@@ -64,7 +64,7 @@ export const TimeRibbon = () => {
             <span
               key={year}
               className="time-ribbon-years-marker"
-              style={{ left: `calc(${365 * (i + 2)}px - 3rem + 16rem)` }}
+              style={{ left: `calc(${365 * (i + 2)}px - 3rem + 16rem)` }} // year + index - half width of span + padding width
             >
               {year}
             </span>
