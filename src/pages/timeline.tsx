@@ -10,7 +10,10 @@ import './timeline.scss'
 const TimeLine: React.FC = () => {
   return (
     // mobile hack to avoid having to scroll to see the timeline ribbon scale
-    <div className="timeline-wrapper" style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100px'}`}}> 
+    <div
+      className="timeline-wrapper"
+      style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100px'}` }}
+    >
       <Header />
       <div className="timeline">
         <div className="timeline-start">
@@ -18,7 +21,7 @@ const TimeLine: React.FC = () => {
 
           <p className="timeline-intro">
             The timeline of the Toronto Maple Leafs since their last Stanley Cup
-            if one day were equal to 1 Pixel
+            if one day were equal to 1 pixel
           </p>
 
           <div className="timeline-arrow">

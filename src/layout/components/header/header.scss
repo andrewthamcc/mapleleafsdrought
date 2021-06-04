@@ -8,6 +8,7 @@
 
   &-logo {
     height: 4.8rem;
+    margin-right: 1rem;
   }
 
   &-title {
@@ -22,14 +23,13 @@
   &-flex-container {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .header {
     &-title {
-      font-size: 2.8rem
+      font-size: 2.8rem;
     }
 
     &-flex-container {

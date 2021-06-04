@@ -1,0 +1,50 @@
+.about {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(5, 78, 195, 0.8)
+    ),
+    url('../images/bg-about.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(5, 78, 195);
+  padding: 3.2rem 0;
+
+  p {
+    font-weight: 300;
+    line-height: 3rem;
+    margin: 3.2rem 0;
+    text-shadow: 1px 1px #000000;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+
+  .container {
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  &-logo {
+    width: 16rem;
+
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about .container {
+    width: 80%;
+  }
+}

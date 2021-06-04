@@ -8,6 +8,11 @@ export const Nav: React.FC = () => {
       <div className="container">
         <ul className="nav-list">
           <li>
+            <Link to="/history" className="nav-link">
+              History
+            </Link>
+          </li>
+          <li>
             <Link to="/timeline" className="nav-link">
               Timeline
             </Link>

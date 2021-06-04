@@ -1,0 +1,19 @@
+.not-found {
+  flex-grow: 1;
+
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5) 30%,
+      rgba(5, 78, 195, 0.4)
+    ),
+    url('../images/notfound.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: rgb(5, 78, 195);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
