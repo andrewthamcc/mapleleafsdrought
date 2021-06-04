@@ -19,6 +19,7 @@
 @media only screen and (max-width: 1024px) {
   .footer-flex-container {
     flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
     gap: 1.4rem;
   }

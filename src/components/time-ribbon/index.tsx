@@ -1,12 +1,47 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { DateTime } from 'luxon'
 import { championshipWin } from '../../constants/wins'
 import { getYears } from '../../utils'
+import CaretDown from '../../svgs/caret-down.svg'
 import './time-ribbon.scss'
 
 export const TimeRibbon = () => {
   const start = DateTime.fromJSDate(championshipWin)
   const difference = DateTime.now().diff(start, 'days').toObject()
+
+  const [dateIndicator, setDateIndicator] = useState<string>('')
+  const [showDateIndicator, setShowDateIndicator] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', (e) => handleScroll(e), true)
+
+    return () => {
+      window.removeEventListener('scroll', (e) => handleScroll(e))
+    }
+  }, [])
+
+  // todo: figure out why the typings for Event are jank and don't contain scroll left
+  const handleScroll = (e: any) => {
+    const windowLocation = e.target.scrollLeft
+    const innerWindowWidth = document.body.clientWidth
+
+    if (windowLocation > (1860 - (innerWindowWidth / 2))) {
+      setShowDateIndicator(true)
+
+      const daysToAdd = windowLocation - (1860 - innerWindowWidth / 2)
+      const currentDateIndicator = DateTime.fromJSDate(
+        new Date('1/1/1967')
+      ).plus({ days: daysToAdd })
+
+      if (difference.days && daysToAdd - difference.days > 100) {
+        setDateIndicator('Present')
+      } else {
+        setDateIndicator(currentDateIndicator.toLocaleString())
+      }
+    } else {
+      setShowDateIndicator(false)
+    }
+  }
 
   return (
     <div className="time-ribbon">
@@ -17,9 +52,22 @@ export const TimeRibbon = () => {
       >
         <div className="time-ribbon-ruler" />
 
+        {showDateIndicator && (
+          <div className="time-ribbon-indicator">
+            <span>{dateIndicator}</span>
+            <CaretDown className="time-ribbon-indicator-caret"/>
+          </div>
+        )}
+
         <div className="time-ribbon-years">
           {getYears(1967, new Date().getFullYear()).map((year, i) => (
-            <span key={year} className="time-ribbon-years-marker" style={{ left: `calc(${365 * (i + 2)}px - 3rem + 16rem)` }}>{year}</span>
+            <span
+              key={year}
+              className="time-ribbon-years-marker"
+              style={{ left: `calc(${365 * (i + 2)}px - 3rem + 16rem)` }}
+            >
+              {year}
+            </span>
           ))}
         </div>
 
