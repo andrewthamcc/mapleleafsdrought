@@ -25,7 +25,8 @@ export const TimeRibbon = () => {
     const windowLocation = e.target.scrollLeft
     const innerWindowWidth = document.body.clientWidth
 
-    if (windowLocation > (1826 - (innerWindowWidth / 2))) { // 1826 is width of intro + spacer + left padding
+    // 1826 is width of intro + spacer + left padding
+    if (windowLocation > 1826 - innerWindowWidth / 2) {
       setShowDateIndicator(true)
 
       const daysToAdd = windowLocation - (1826 - innerWindowWidth / 2)
@@ -55,7 +56,7 @@ export const TimeRibbon = () => {
         {showDateIndicator && (
           <div className="time-ribbon-indicator">
             <span>{dateIndicator}</span>
-            <CaretDown className="time-ribbon-indicator-caret"/>
+            <CaretDown className="time-ribbon-indicator-caret" />
           </div>
         )}
 

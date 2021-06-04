@@ -16,9 +16,10 @@ interface Props {
   date: Date
 }
 
-export const TimeEvent: React.FC<Props> = ({ title, description = '', position }) => {
-  return (
-    <div className="time-event">
-    </div>
-  )
+export const TimeEvent: React.FC<Props> = ({
+  title,
+  description = '',
+  position,
+}) => {
+  return <div className="time-event"></div>
 }

@@ -11,7 +11,8 @@
       gap: 2.4rem;
     }
 
-    &-date, &-time {
+    &-date,
+    &-time {
       display: flex;
       align-items: center;
       gap: 2.4rem;
@@ -33,7 +34,6 @@
   }
 }
 
-
 @media only screen and (max-width: 600px) {
   .clock {
     &-title {
@@ -48,7 +48,8 @@
         gap: 1rem;
       }
 
-      &-date, &-time {
+      &-date,
+      &-time {
         gap: 1.5rem;
       }
     }

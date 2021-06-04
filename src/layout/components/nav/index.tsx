@@ -7,7 +7,11 @@ export const Nav: React.FC = () => {
     <nav className="nav">
       <div className="container">
         <ul className="nav-list">
-          <li><Link to="/timeline" className="nav-link">Timeline</Link></li>
+          <li>
+            <Link to="/timeline" className="nav-link">
+              Timeline
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

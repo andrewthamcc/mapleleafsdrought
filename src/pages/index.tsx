@@ -8,8 +8,11 @@ const IndexPage: React.FC = () => {
   return (
     <Layout title="Maple Leafs Drought" showNav={true}>
       <div className="home">
-        <Clock startTime={championshipWin} title="Last Stanley Cup Championship" />
-        <Clock startTime={playoffWin} title="Last Playoff Series Win"/>
+        <Clock
+          startTime={championshipWin}
+          title="Last Stanley Cup Championship"
+        />
+        <Clock startTime={playoffWin} title="Last Playoff Series Win" />
       </div>
     </Layout>
   )

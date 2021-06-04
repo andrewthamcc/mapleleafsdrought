@@ -7,15 +7,14 @@
   font-size: 1.4rem;
 
   &-logo {
-    height: 4.8rem; 
+    height: 4.8rem;
   }
 
   &-title {
     margin: 0;
     padding: 0;
     font-size: 3.2rem;
-    font-family: "Open Sans";
-    // font-weight: 400;
+    font-family: 'Open Sans';
     letter-spacing: 4px;
     text-transform: uppercase;
   }
@@ -24,5 +23,17 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    &-title {
+      font-size: 2.8rem
+    }
+
+    &-flex-container {
+      gap: 1.2rem;
+    }
   }
 }

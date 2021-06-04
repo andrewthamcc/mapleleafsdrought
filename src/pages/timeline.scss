@@ -2,13 +2,13 @@
   overflow-x: auto;
   position: relative;
   flex-grow: 1;
-  
+  height: 100%;
+
   &-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
   }
-  
+
   &-start {
     width: 1000px;
     float: left;
@@ -40,6 +40,10 @@
   &-arrow {
     display: flex;
     align-items: center;
+
+    &-image-short {
+      display: none;
+    }
   }
 }
 
@@ -77,6 +81,7 @@
     &-start {
       justify-content: flex-start;
       gap: 1.6rem;
+      padding: 6.4rem 4rem;
     }
 
     &-title {
@@ -90,8 +95,16 @@
     }
 
     &-arrow {
-      flex-direction: row-reverse;
-      justify-content: flex-end;
+      // justify-content: flex-end;
+
+      &-image {
+        display: none;
+      }
+
+      &-image-short {
+        display: block;
+      }
     }
   }
+
 }
