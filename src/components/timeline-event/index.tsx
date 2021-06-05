@@ -13,10 +13,8 @@ interface Props {
 export const TimeLineEvent: React.FC<Props> = ({ event, markerPosition }) => {
   const [showDescription, setShowDescription] = useState(false)
 
-  console.log(event.date)
-
-  const yearStart = DateTime.fromISO('1967-01-01')
-  const daysFromStart = DateTime.fromJSDate(event.date).diff(yearStart, 'days')
+  const timelineStart = DateTime.fromISO('1967-01-01')
+  const daysFromStart = DateTime.fromJSDate(event.date).diff(timelineStart, 'days')
 
   const left = 1000 + 730 + 160 - 125 + daysFromStart.days // intro + spacer + left padding - 1/2 width of box
   const bottom = `50`
