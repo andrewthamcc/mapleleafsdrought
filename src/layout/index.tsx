@@ -11,10 +11,10 @@ const Layout: React.FC<Props> = ({ showNav = true, title, children }) => {
   return (
     <>
       <div className="layout">
+        <title>{title}</title>
         <Header />
         {showNav && <Nav />}
         <main className="main">
-          <title>{title}</title>
           {children}
         </main>
       </div>

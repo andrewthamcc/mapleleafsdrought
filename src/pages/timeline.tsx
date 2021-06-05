@@ -15,6 +15,7 @@ const TimeLine: React.FC = () => {
       // mobile hack to avoid having to scroll vertically to remove the navbar/controls see the timeline ribbon scale
       style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100vh'}` }}
     >
+      <title>Timeline</title>
       <Header />
       <div className="timeline">
         <div className="timeline-start">
