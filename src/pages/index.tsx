@@ -6,7 +6,7 @@ import './home.scss'
 
 const IndexPage: React.FC = () => {
   return (
-    <Layout title="Maple Leafs Drought" showNav={true}>
+    <Layout title="Home" showNav={true}>
       <div className="home">
         <Clock
           startTime={championshipWin}

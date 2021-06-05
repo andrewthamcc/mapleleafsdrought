@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Header, Nav } from './components'
+import { Footer, Header, Nav, SEO } from './components'
 import './layout.scss'
 
 interface Props {
@@ -10,13 +10,11 @@ interface Props {
 const Layout: React.FC<Props> = ({ showNav = true, title, children }) => {
   return (
     <>
+      <SEO title={title} />
       <div className="layout">
-        <title>{title}</title>
         <Header />
         {showNav && <Nav />}
-        <main className="main">
-          {children}
-        </main>
+        <main className="main">{children}</main>
       </div>
       <Footer />
     </>

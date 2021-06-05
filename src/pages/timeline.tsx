@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '../layout/components'
+import { Header, SEO } from '../layout/components'
 import { TimeLineEvent, TimelineScale } from '../components'
 import ArrowRight from '../svgs/arrow-right.svg'
 import ArrowRightShort from '../svgs/arrow-right-short.svg'
@@ -15,7 +15,7 @@ const TimeLine: React.FC = () => {
       // mobile hack to avoid having to scroll vertically to remove the navbar/controls see the timeline ribbon scale
       style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100vh'}` }}
     >
-      <title>Timeline</title>
+      <SEO title="Timeline" />
       <Header />
       <div className="timeline">
         <div className="timeline-start">
