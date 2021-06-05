@@ -1,2 +1,2 @@
-export const playoffWin = new Date('4/20/2004')
-export const championshipWin = new Date('5/4/1967')
+export const playoffWin = new Date('2004/04/20')
+export const championshipWin = new Date('1967/05/02')
