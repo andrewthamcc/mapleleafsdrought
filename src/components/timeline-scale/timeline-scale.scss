@@ -1,4 +1,4 @@
-.time-ribbon {
+.timeline-scale {
   height: 100%;
   padding: 0 16rem;
   padding-right: 72rem;
@@ -33,9 +33,11 @@
     font-family: 'Oswald';
     font-size: 2rem;
     font-weight: 400;
+    text-shadow: 1px 1px #090909;
     position: fixed;
-    left: 50%;
-    bottom: 20%;
+    left: calc(50% - 4rem);
+    bottom: 15%;
+    width: 8rem;
 
     display: flex;
     flex-direction: column;
@@ -51,10 +53,11 @@
     font-family: 'Oswald';
     font-size: 3rem;
     font-weight: 400;
+    text-shadow: 1px 1px #090909;
 
     &-marker {
       position: absolute;
-      bottom: 3%;
+      bottom: 4%;
       width: 6rem;
       text-align: center;
     }
@@ -79,10 +82,6 @@
 
 @media only screen and (max-width: 500px) {
   .time-ribbon {
-    &-indicator {
-      bottom: 15%;
-    }
-
     &-years-marker {
       bottom: 5%;
     }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Dot from '../../svgs/dot.svg'
 import { DateTime } from 'luxon'
 import './time-event.scss'
-import { TimeEvent } from '../../constants/events'
+import { TimeEvent } from '../../constants'
 
 interface Props {
   event: TimeEvent
@@ -24,17 +24,15 @@ export const TimeLineEvent: React.FC<Props> = ({ event, markerPosition }) => {
   return (
     <div
       className="time-event"
+      onMouseEnter={() => setShowDescription(true)}
+      onMouseLeave={() => setShowDescription(false)}
       style={{
         left: `${left}px`,
         bottom: `${markerPosition ? markerPosition : bottom}%`,
       }}
     >
       <div className="time-event-marker-container">
-        <Dot
-          className="time-event-marker"
-          onMouseEnter={() => setShowDescription(true)}
-          onMouseLeave={() => setShowDescription(false)}
-        />
+        <Dot className="time-event-marker" />
         <p className="time-event-date">{event.date.toLocaleDateString()}</p>
         <p className="time-event-title">{event.title}</p>
         <p

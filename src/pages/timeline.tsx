@@ -1,11 +1,11 @@
 import React from 'react'
 import { Header } from '../layout/components'
-import { TimeRibbon, TimeLineEvent } from '../components'
+import { TimeLineEvent, TimelineScale } from '../components'
 import ArrowRight from '../svgs/arrow-right.svg'
 import ArrowRightShort from '../svgs/arrow-right-short.svg'
 import PixelImage from '../svgs/pixel.svg'
 import { isBrowser } from '../utils'
-import { events } from '../constants/events'
+import { events } from '../constants'
 import './timeline.scss'
 
 const TimeLine: React.FC = () => {
@@ -25,13 +25,14 @@ const TimeLine: React.FC = () => {
             if one day were equal to 1 pixel
           </p>
 
+          <p className="timeline-instructions">scroll to explore</p>
           <div className="timeline-arrow">
             <ArrowRight className="timeline-arrow-image" />
             <ArrowRightShort className="timeline-arrow-image-short" />
             <PixelImage />
           </div>
         </div>
-        <TimeRibbon />
+        <TimelineScale />
         <TimeLineEvent event={events['1967-05-02']} />
         <TimeLineEvent event={events['1971-09-01']} />
         <TimeLineEvent event={events['1972-09-28']} />
@@ -47,7 +48,7 @@ const TimeLine: React.FC = () => {
         <TimeLineEvent event={events['1994-01-22']} markerPosition={30} />
         <TimeLineEvent event={events['1994-06-28']} />
         <TimeLineEvent event={events['1999-02-13']} />
-        <TimeLineEvent event={events['2000-02-06']} markerPosition={65} />
+        <TimeLineEvent event={events['2000-02-06']} markerPosition={75} />
         <TimeLineEvent event={events['2000-04-27']} markerPosition={30} />
         <TimeLineEvent event={events['2001-03-29']} />
         <TimeLineEvent event={events['2002-02-24']} />
@@ -55,7 +56,10 @@ const TimeLine: React.FC = () => {
         <TimeLineEvent event={events['2004-03-15']} />
         <TimeLineEvent event={events['2006-06-26']} markerPosition={45} />
         <TimeLineEvent event={events['2006-10-14']} markerPosition={65} />
-        <TimeLineEvent event={events['2008-10-14']} />
+        <TimeLineEvent event={events['2008-10-14']} markerPosition={70} />
+        <TimeLineEvent event={events['2008-11-29']} markerPosition={40} />
+        <TimeLineEvent event={events['2009-09-18']} markerPosition={40} />
+        <TimeLineEvent event={events['2010-01-31']} markerPosition={70} />
         <TimeLineEvent event={events['2011-08-31']} />
         <TimeLineEvent event={events['2013-05-13']} />
         <TimeLineEvent event={events['2014-04-14']} />
@@ -63,6 +67,7 @@ const TimeLine: React.FC = () => {
         <TimeLineEvent event={events['2016-10-12']} markerPosition={65} />
         <TimeLineEvent event={events['2018-07-01']} />
         <TimeLineEvent event={events['2020-02-22']} />
+        <TimeLineEvent event={events['2020-08-01']} markerPosition={75} />
         <TimeLineEvent event={events['2021-05-31']} />
       </div>
     </div>

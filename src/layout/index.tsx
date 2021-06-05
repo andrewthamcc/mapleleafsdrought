@@ -9,15 +9,17 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ showNav = true, title, children }) => {
   return (
-    <div className="layout">
-      <Header />
-      {showNav && <Nav />}
-      <main className="main">
-        <title>{title}</title>
-        {children}
-      </main>
+    <>
+      <div className="layout">
+        <Header />
+        {showNav && <Nav />}
+        <main className="main">
+          <title>{title}</title>
+          {children}
+        </main>
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

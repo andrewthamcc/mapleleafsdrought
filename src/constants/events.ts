@@ -29,7 +29,9 @@ const eventDates = [
   '2006-06-26',
   '2006-10-14',
   '2008-10-14',
+  '2008-11-29',
   '2009-09-18',
+  '2010-01-31',
   '2011-08-31',
   '2013-05-13',
   '2014-04-14',
@@ -37,6 +39,7 @@ const eventDates = [
   '2016-10-12',
   '2018-07-01',
   '2020-02-22',
+  '2020-08-01',
   '2021-05-31',
 ] as const
 
@@ -71,7 +74,7 @@ export const events: Record<EventDate, TimeEvent> = {
   '1979-12-29': {
     date: new Date('1979/12/29'),
     title: `Lanny McDonald traded`,
-    description: 'Darryl Sittler cuts off his C',
+    description: 'Sittler cuts off his C',
   },
   '1982-01-20': {
     date: new Date('1982/01/20'),
@@ -136,21 +139,31 @@ export const events: Record<EventDate, TimeEvent> = {
   '2006-06-26': {
     date: new Date('2006/06/24'),
     title: 'Leafs aquire Andrew Raycroft',
-    description: 'Boston aquires Tukka Rask',
+    description: 'Boston gets Tuukka Rask in return',
   },
   '2006-10-14': {
     date: new Date('2006/10/14'),
     title: `Sundin's 500th Goal`,
-    description: 'OT, short handed, hat-trick',
+    description: 'OT, hat-trick, short handed, clutch',
   },
   '2008-10-14': {
     date: new Date('2008/10/14'),
     title: `Sundin Returns as a Canuck`,
   },
+  '2008-11-29': {
+    date: new Date('2008/11/29'),
+    title: `GM Brian Burke says "truculence"`,
+    description: 'pugnacity, testosterone, truculence and belligerence',
+  },
   '2009-09-18': {
     date: new Date('2009/09/18'),
     title: 'Leafs acquire Phil Kessel',
-    description: 'Trade two 1st and a 2nd round pick',
+    description: 'for two 1sts and a 2nd round pick to Boston',
+  },
+  '2010-01-31': {
+    date: new Date('2010/01/31'),
+    title: 'Leafs acquire Dion Phaneuf',
+    description: '7 player trade with Calgary',
   },
   '2011-08-31': {
     date: new Date('2011/08/31'),
@@ -184,6 +197,11 @@ export const events: Record<EventDate, TimeEvent> = {
     title: 'David Ayres beats Toronto',
     description:
       '"THEY LOST TO A 42-YEAR-OLD ZAMBONI DRIVER WHO WORKS FOR THE TEAM"',
+  },
+  '2020-08-01': {
+    date: new Date('2020/08/01'),
+    title: 'NHL COVID-19 Bubble',
+    description: 'Toronto is chosen as one of two bubble cities',
   },
   '2021-05-31': {
     date: new Date('2021/05/31'),
