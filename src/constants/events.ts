@@ -22,7 +22,6 @@ const eventDates = [
   '1999-02-13',
   '2000-02-06',
   '2000-04-27',
-  '2000-12-27',
   '2001-03-29',
   '2002-02-24',
   '2003-03-13',
@@ -116,11 +115,6 @@ export const events: Record<EventDate, TimeEvent> = {
   '2000-04-27': {
     date: new Date('2000/04/27'),
     title: `Wendel Clark's last game`
-  },
-  '2000-12-27': {
-    date: new Date('2000/12/27'),
-    title: `Lemiux's Return`,
-    description: 'Lemiux scores three against the leafs'
   },
   '2001-03-29': {
     date: new Date('2000/03/29'),

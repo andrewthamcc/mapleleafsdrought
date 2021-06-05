@@ -49,7 +49,6 @@ const TimeLine: React.FC = () => {
         <TimeLineEvent event={events['1999-02-13']} />
         <TimeLineEvent event={events['2000-02-06']} markerPosition={65} />
         <TimeLineEvent event={events['2000-04-27']} markerPosition={30} />
-        <TimeLineEvent event={events['2000-12-27']} />
         <TimeLineEvent event={events['2001-03-29']} />
         <TimeLineEvent event={events['2002-02-24']} />
         <TimeLineEvent event={events['2003-03-13']} />
