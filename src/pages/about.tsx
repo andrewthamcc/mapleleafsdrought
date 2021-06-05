@@ -9,7 +9,7 @@ const About: React.FC = () => {
       <div className="about">
         <div className="container">
           <p>
-            MapleLeafsDrought was created in response to the 2021 playoff.
+            MapleLeafsDrought was created in response to the 2021 playoff loss.
             Wanting to channel my disappointment and fustration I created this
             website to cope with the loss.
           </p>

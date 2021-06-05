@@ -1,6 +1,6 @@
 .time-event {
   position: absolute;
-  
+
   &-marker-container {
     width: 25rem;
 
@@ -16,7 +16,7 @@
     transition: transform 0.3s;
 
     &:hover {
-      transform: scale(1.2); 
+      transform: scale(1.2);
     }
   }
 
@@ -40,7 +40,7 @@
     text-align: center;
 
     &.show {
-      opacity: 1
+      opacity: 1;
     }
   }
 }

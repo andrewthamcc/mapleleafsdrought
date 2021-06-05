@@ -11,7 +11,7 @@ import './timeline.scss'
 const TimeLine: React.FC = () => {
   return (
     <div
-    className="timeline-wrapper"
+      className="timeline-wrapper"
       // mobile hack to avoid having to scroll vertically to remove the navbar/controls see the timeline ribbon scale
       style={{ height: `${isBrowser() ? window.innerHeight + 'px' : '100vh'}` }}
     >
@@ -53,13 +53,13 @@ const TimeLine: React.FC = () => {
         <TimeLineEvent event={events['2002-02-24']} />
         <TimeLineEvent event={events['2003-03-13']} />
         <TimeLineEvent event={events['2004-03-15']} />
-        <TimeLineEvent event={events['2006-06-26']} markerPosition={45}/>
+        <TimeLineEvent event={events['2006-06-26']} markerPosition={45} />
         <TimeLineEvent event={events['2006-10-14']} markerPosition={65} />
         <TimeLineEvent event={events['2008-10-14']} />
         <TimeLineEvent event={events['2011-08-31']} />
         <TimeLineEvent event={events['2013-05-13']} />
         <TimeLineEvent event={events['2014-04-14']} />
-        <TimeLineEvent event={events['2016-06-24']} markerPosition={40}/>
+        <TimeLineEvent event={events['2016-06-24']} markerPosition={40} />
         <TimeLineEvent event={events['2016-10-12']} markerPosition={65} />
         <TimeLineEvent event={events['2018-07-01']} />
         <TimeLineEvent event={events['2020-02-22']} />
