@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Info from '../../../svgs/info.svg'
 import Twitter from '../../../svgs/twitter.svg'
 import './footer.scss'
 
@@ -18,7 +19,9 @@ export const Footer: React.FC = () => {
         <nav className="footer-nav">
           <ul className="footer-nav-list">
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">
+                <Info className="footer-info" />
+              </Link>
             </li>
             <li>
               <a href="https://twitter.com/Andrew_Tham" target="_blank">

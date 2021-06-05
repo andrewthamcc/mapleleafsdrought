@@ -1,0 +1,44 @@
+.time-event {
+  position: absolute;
+  
+  &-marker-container {
+    width: 25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-marker {
+    width: 2rem;
+    margin: 1rem 0;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2); 
+    }
+  }
+
+  &-title {
+    margin: 0.8rem;
+  }
+
+  &-date {
+    font-family: 'Oswald';
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+
+    &.show {
+      opacity: 1
+    }
+  }
+}

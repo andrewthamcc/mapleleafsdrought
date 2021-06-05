@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { DateTime } from 'luxon'
+import { FadeIn } from '../fade-in'
 import { championshipWin } from '../../constants/wins'
 import { getYears } from '../../utils'
 import CaretDown from '../../svgs/caret-down.svg'
@@ -54,10 +55,12 @@ export const TimeRibbon = () => {
         <div className="time-ribbon-ruler" />
 
         {showDateIndicator && (
-          <div className="time-ribbon-indicator">
-            <span>{dateIndicator}</span>
-            <CaretDown className="time-ribbon-indicator-caret" />
-          </div>
+          <FadeIn duration={500}>
+            <div className="time-ribbon-indicator">
+              <span>{dateIndicator}</span>
+              <CaretDown className="time-ribbon-indicator-caret" />
+            </div>
+          </FadeIn>
         )}
 
         <div className="time-ribbon-years">

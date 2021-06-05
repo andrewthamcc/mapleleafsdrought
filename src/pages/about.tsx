@@ -9,10 +9,9 @@ const About: React.FC = () => {
       <div className="about">
         <div className="container">
           <p>
-            MapleLeafsDrought was created in response to the 2021 playoff defeat to
-            the Montreal Canadiens. Wanting to channel and express my
-            disappointment as a life long Leaf fan I created this website to
-            cope with the loss.
+            MapleLeafsDrought was created in response to the 2021 playoff.
+            Wanting to channel my disappointment and fustration I created this
+            website to cope with the loss.
           </p>
 
           <p>
@@ -23,8 +22,8 @@ const About: React.FC = () => {
             >
               If the Moon were only 1 Pixel
             </a>
-            . The timeline is programmatically calculated and updates every
-            passing day to present an accurate representation of the time
+            . The timeline scale is programmatically calculated and updates
+            every passing day to present an accurate representation of the time
             passed.
           </p>
 
