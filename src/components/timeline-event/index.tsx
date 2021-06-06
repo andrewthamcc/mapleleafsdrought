@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Dot from '../../svgs/dot.svg'
 import { DateTime } from 'luxon'
-import './time-event.scss'
 import { TimeEvent } from '../../constants'
+import './time-event.scss'
 
 interface Props {
   event: TimeEvent

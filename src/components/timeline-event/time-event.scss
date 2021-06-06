@@ -43,8 +43,14 @@
   }
 
   &:hover {
-    .time-event-marker {
-      transform: scale(1.2);
+    .time-event {
+      &-description {
+        opacity: 1
+      }
+
+      &-marker {
+        transform: scale(1.2);
+      }
     }
   }
 }
