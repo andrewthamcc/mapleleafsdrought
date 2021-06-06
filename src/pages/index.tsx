@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { championshipWin, playoffWin } from '../constants'
-import { Clock } from '../components'
 import Layout from '../layout'
 import { SocialShare } from '../layout/components'
+import { Clock } from '../components'
+import { championshipWin, playoffWin } from '../constants'
 import './home.scss'
 
 const IndexPage: React.FC = () => {

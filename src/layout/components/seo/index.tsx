@@ -21,35 +21,34 @@ interface Props {
   description?: string
   lang?: string
   meta?: any[]
+  metaImage: {
+    src: string
+    height: string
+    width: string
+  }
+  pathname?: string
   title: string
-  image?: string
 }
 
 export const SEO: React.FC<Props> = ({
   description = '',
   lang = 'en',
   meta = [],
+  metaImage = {
+    src: 'https://mapleleafsdrought.com/seo.png',
+    width: '1200',
+    height: '675',
+  },
+  pathname,
   title,
-  image = 'https://mapleleafsdrought.com/seo.png',
 }) => {
   const { site } = useStaticQuery(query)
-  const {
-    author,
-    defaultDescription,
-    defaultImage,
-    keywords,
-    defaultTitle,
-    url,
-  } = site.siteMetadata
-
-  const seo = {
-    author,
-    description: description || defaultDescription,
-    image: image || defaultImage,
-    keywords,
-    title: title || defaultTitle,
-    url,
-  }
+  const metaDescription = description || site.siteMetadata.description
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
     <Helmet
@@ -57,61 +56,79 @@ export const SEO: React.FC<Props> = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${defaultTitle}`}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={
+        canonical
+          ? [
+              {
+                rel: 'canonical',
+                href: canonical,
+              },
+            ]
+          : []
+      }
       meta={[
         {
-          name: `image`,
-          content: seo.image,
-        },
-        {
           name: `description`,
-          content: seo.description,
+          content: metaDescription,
         },
         {
-          name: `keywords`,
-          content: seo.keywords,
+          name: 'keywords',
+          content: site.siteMetadata.keywords,
         },
         {
           property: `og:title`,
-          content: seo.title,
+          content: title,
         },
         {
           property: `og:description`,
-          content: seo.description,
+          content: metaDescription,
         },
         {
           property: `og:type`,
           content: `website`,
         },
         {
-          property: `og:image`,
-          content: image,
-        },
-        {
-          property: `og:image:width`,
-          content: '1696'
-        },
-        {
-          property: `og:image:height`,
-          content: '954'
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
-          content: seo.author,
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
-          content: seo.title,
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: seo.description,
+          content: metaDescription,
         },
-      ].concat(meta)}
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: 'og:image',
+                  content: image,
+                },
+                {
+                  property: 'og:image:width',
+                  content: metaImage.width,
+                },
+                {
+                  property: 'og:image:height',
+                  content: metaImage.height,
+                },
+                {
+                  name: 'twitter:card',
+                  content: 'summary_large_image',
+                },
+              ]
+            : [
+                {
+                  name: 'twitter:card',
+                  content: 'summary',
+                },
+              ]
+        )
+        .concat(meta)}
     />
   )
 }

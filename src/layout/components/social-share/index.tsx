@@ -26,7 +26,10 @@ export const SocialShare: React.FC = () => {
           </a>
         </li>
         <li>
-          <a href="https://reddit.com/submit?url=https://mapleleafsdrought.com&title=The%20timeline%20of%20the%20Toronto%20Maple%20Leafs%20since%20their%20last%20Stanley%20Cup%20if%20one%20day%20were%20equal%20to%201%20pixel" target="_blank">
+          <a
+            href="https://reddit.com/submit?url=https://mapleleafsdrought.com&title=The%20timeline%20of%20the%20Toronto%20Maple%20Leafs%20since%20their%20last%20Stanley%20Cup%20if%20one%20day%20were%20equal%20to%201%20pixel"
+            target="_blank"
+          >
             <RedditLogo className="share-logo" />
           </a>
         </li>
