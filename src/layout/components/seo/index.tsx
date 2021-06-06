@@ -20,7 +20,7 @@ const query = graphql`
 interface Props {
   lang?: string
   meta?: any[]
-  metaImage: {
+  metaImage?: {
     src: string
     height: string
     width: string
@@ -32,11 +32,7 @@ interface Props {
 export const SEO: React.FC<Props> = ({
   lang = 'en',
   meta = [],
-  metaImage = {
-    src: 'https://mapleleafsdrought.com/seo.png',
-    width: '1200',
-    height: '675',
-  },
+  metaImage,
   pathname,
   title,
 }) => {

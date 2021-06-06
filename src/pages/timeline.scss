@@ -9,6 +9,12 @@
     flex-direction: column;
   }
 
+  &-team-logo {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.8rem;
+  }
+
   &-start {
     width: 1000px;
     float: left;

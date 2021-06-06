@@ -40,7 +40,7 @@ const TimeLine: React.FC = () => {
         <TimelineScale />
         <TimeLineEvent
           event={events['1967-05-02']}
-          icon={<LeafWhite style={{ width: '3rem', height: '3rem' }} />}
+          icon={<LeafWhite className="timeline-team-logo" />}
           markerPosition={25}
         />
         <TimeLineEvent event={events['1971-09-01']} />
@@ -55,13 +55,13 @@ const TimeLine: React.FC = () => {
         <TimeLineEvent event={events['1992-01-02']} />
         <TimeLineEvent
           event={events['1992-10-24']}
-          icon={<BlueJays style={{ width: '3rem', height: '3rem' }} />}
+          icon={<BlueJays className="timeline-team-logo" />}
           markerPosition={25}
         />
         <TimeLineEvent event={events['1993-05-27']} markerPosition={70} />
         <TimeLineEvent
           event={events['1993-10-23']}
-          icon={<BlueJays style={{ width: '3rem', height: '3rem' }} />}
+          icon={<BlueJays className="timeline-team-logo" />}
           markerPosition={25}
         />
         <TimeLineEvent event={events['1994-01-22']} markerPosition={45} />
@@ -90,13 +90,13 @@ const TimeLine: React.FC = () => {
         <TimeLineEvent event={events['2016-10-12']} markerPosition={65} />
         <TimeLineEvent
           event={events['2017-12-09']}
-          icon={<TFC style={{ width: '3rem', height: '3rem' }} />}
+          icon={<TFC className="timeline-team-logo" />}
           markerPosition={25}
         />
         <TimeLineEvent event={events['2018-07-01']} />
         <TimeLineEvent
           event={events['2019-06-13']}
-          icon={<Raptors style={{ width: '3rem', height: '3rem' }} />}
+          icon={<Raptors className="timeline-team-logo" />}
           markerPosition={25}
         />
         <TimeLineEvent event={events['2020-02-22']} />
