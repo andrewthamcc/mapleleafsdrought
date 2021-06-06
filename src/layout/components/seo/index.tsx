@@ -7,10 +7,10 @@ const query = graphql`
     site {
       siteMetadata {
         author
-        defaultDescription: description
+        description
         defaultImage: image
         keywords
-        defaultTitle: title
+        title
         url
       }
     }
@@ -18,7 +18,6 @@ const query = graphql`
 `
 
 interface Props {
-  description?: string
   lang?: string
   meta?: any[]
   metaImage: {
@@ -31,7 +30,6 @@ interface Props {
 }
 
 export const SEO: React.FC<Props> = ({
-  description = '',
   lang = 'en',
   meta = [],
   metaImage = {
@@ -43,7 +41,6 @@ export const SEO: React.FC<Props> = ({
   title,
 }) => {
   const { site } = useStaticQuery(query)
-  const metaDescription = description || site.siteMetadata.description
   const image =
     metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
@@ -70,7 +67,7 @@ export const SEO: React.FC<Props> = ({
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
         },
         {
           name: 'keywords',
@@ -78,11 +75,11 @@ export const SEO: React.FC<Props> = ({
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
         },
         {
           property: `og:type`,
@@ -94,11 +91,11 @@ export const SEO: React.FC<Props> = ({
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
         },
       ]
         .concat(
