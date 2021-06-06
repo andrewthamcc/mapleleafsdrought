@@ -6,10 +6,15 @@ import './time-event.scss'
 
 interface Props {
   event: TimeEvent
+  icon?: JSX.Element
   markerPosition?: number // vertical position of the text
 }
 
-export const TimeLineEvent: React.FC<Props> = ({ event, markerPosition }) => {
+export const TimeLineEvent: React.FC<Props> = ({
+  event,
+  icon,
+  markerPosition,
+}) => {
   const [showDescription, setShowDescription] = useState(false)
 
   const timelineStart = DateTime.fromISO('1967-01-01')
@@ -32,7 +37,7 @@ export const TimeLineEvent: React.FC<Props> = ({ event, markerPosition }) => {
       }}
     >
       <div className="time-event-marker-container">
-        <Dot className="time-event-marker" />
+        {icon || <Dot className="time-event-marker" />}
         <p className="time-event-date">{event.date.toLocaleDateString()}</p>
         <p className="time-event-title">{event.title}</p>
         <p

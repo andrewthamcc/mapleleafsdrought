@@ -88,6 +88,14 @@ export const SEO: React.FC<Props> = ({
           content: image,
         },
         {
+          property: `og:image:width`,
+          content: '1696'
+        },
+        {
+          property: `og:image:height`,
+          content: '954'
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },

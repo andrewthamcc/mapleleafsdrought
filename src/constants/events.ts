@@ -16,7 +16,9 @@ const eventDates = [
   '1982-03-24',
   '1985-06-15',
   '1992-01-02',
+  '1992-10-24',
   '1993-05-27',
+  '1993-10-23',
   '1994-01-22',
   '1994-06-28',
   '1999-02-13',
@@ -25,19 +27,25 @@ const eventDates = [
   '2001-03-29',
   '2002-02-24',
   '2003-03-13',
+  '2003-08-29',
   '2004-03-15',
   '2006-06-26',
   '2006-10-14',
+  '2008-03-18',
   '2008-10-14',
   '2008-11-29',
   '2009-09-18',
   '2010-01-31',
+  '2010-12-09',
   '2011-08-31',
+  '2012-03-29',
   '2013-05-13',
   '2014-04-14',
   '2016-06-24',
   '2016-10-12',
+  '2017-12-09',
   '2018-07-01',
+  '2019-06-13',
   '2020-02-22',
   '2020-08-01',
   '2021-05-31',
@@ -48,7 +56,7 @@ type EventDate = typeof eventDates[number]
 export const events: Record<EventDate, TimeEvent> = {
   '1967-05-02': {
     date: new Date('1967/05/02'),
-    title: '1967 Champions',
+    title: '1967 Stanley Cup Champions',
   },
   '1971-09-01': {
     date: new Date('1971/09/01'),
@@ -93,10 +101,18 @@ export const events: Record<EventDate, TimeEvent> = {
     date: new Date('1992/01/02'),
     title: 'Gilmore arrives',
   },
+  '1992-10-24': {
+    date: new Date('1992/10/24'),
+    title: 'World Series Champions',
+  },
   '1993-05-27': {
     date: new Date('1993/05/27'),
     title: 'Game 6 vs L.A. Kings',
     description: 'The high stick that never was',
+  },
+  '1993-10-23': {
+    date: new Date('1993/10/23'),
+    title: 'World Series Champions',
   },
   '1994-01-22': {
     date: new Date('1994/01/22'),
@@ -132,6 +148,11 @@ export const events: Record<EventDate, TimeEvent> = {
     date: new Date('2003/03/13'),
     title: 'Gilmour Returns! Sorta',
   },
+  '2003-08-29': {
+    date: new Date('2003/08/29'),
+    title: 'JFJ hired as GM',
+    description: 'An era of bad trades and signings to follow',
+  },
   '2004-03-15': {
     date: new Date('2004/03/15'),
     title: 'Mogilny scores his 1000th point.',
@@ -145,6 +166,10 @@ export const events: Record<EventDate, TimeEvent> = {
     date: new Date('2006/10/14'),
     title: `Sundin's 500th Goal`,
     description: 'OT, hat-trick, short handed, clutch',
+  },
+  '2008-03-18': {
+    date: new Date('2008/03/18'),
+    title: `Vesa Toskala's 197 Foot Goal`,
   },
   '2008-10-14': {
     date: new Date('2008/10/14'),
@@ -165,10 +190,19 @@ export const events: Record<EventDate, TimeEvent> = {
     title: 'Leafs acquire Dion Phaneuf',
     description: '7 player trade with Calgary',
   },
+  '2010-12-09': {
+    date: new Date('2010/12/09'),
+    title: 'Waffles',
+  },
   '2011-08-31': {
     date: new Date('2011/08/31'),
     title: 'Wade Belak Passes',
     description: 'R.I.P. Wade',
+  },
+  '2012-03-29': {
+    date: new Date('2012/03/29'),
+    title: `"LET'S GO BLUE JAYS!" Chant`,
+    description: 'Leafs lose 7 - 1',
   },
   '2013-05-13': {
     date: new Date('2013/05/13'),
@@ -181,16 +215,24 @@ export const events: Record<EventDate, TimeEvent> = {
     description: 'The Shanaplan begins',
   },
   '2016-06-24': {
-    date: new Date('2015/06/24'),
+    date: new Date('2016/06/24'),
     title: 'Auston Matthews Drafted',
   },
   '2016-10-12': {
-    date: new Date('2015/10/12'),
+    date: new Date('2016/10/12'),
     title: `Matthew's 4 Goal Debut`,
   },
   '2018-07-01': {
     date: new Date('2017/07/01'),
     title: `John Tavares Signs`,
+  },
+  '2017-12-09': {
+    date: new Date('2017/12/09'),
+    title: `MLS Cup Champions`,
+  },
+  '2019-06-13': {
+    date: new Date('2019/06/13'),
+    title: `NBA Champions`,
   },
   '2020-02-22': {
     date: new Date('2020/02/22'),
