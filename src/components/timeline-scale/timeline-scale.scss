@@ -31,13 +31,14 @@
 
   &-indicator {
     font-family: 'Oswald';
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     text-shadow: 1px 1px #090909;
     position: fixed;
-    left: calc(50% - 4rem);
+    left: calc(50% - 5rem);
     bottom: 15%;
-    width: 8rem;
+    width: 10rem;
+    text-align: center;
 
     display: flex;
     flex-direction: column;
