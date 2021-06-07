@@ -39,7 +39,7 @@ export const SEO: React.FC<Props> = ({
   const { site } = useStaticQuery(query)
   const image =
     metaImage && metaImage.src
-      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      ? `${site.siteMetadata.url}${metaImage.src}`
       : null
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 

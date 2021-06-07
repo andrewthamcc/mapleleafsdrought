@@ -4,7 +4,7 @@ module.exports = {
     description: `What does the timeline of the Leafs look like if 1 day were equal to 1 pixel`,
     author: `Andrew Tham`,
     keywords: `maple leafs, leafs, hockey, toronto, nhl, playoffs, leaf, ice hockey, fans, stanley cup, playoffs, hockey team, mlse`,
-    url: 'https://maplelafsdrought.com',
+    url: 'http://mapleleafsdrought.com',
     image: `src/images/seo.png`,
   },
   plugins: [
