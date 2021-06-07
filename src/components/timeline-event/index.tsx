@@ -23,7 +23,7 @@ export const TimeLineEvent: React.FC<Props> = ({
     'days'
   )
 
-  const left = 1000 + 730 + 160 - 125 + daysFromStart.days // intro + spacer + left padding - 1/2 width of box
+  const left = 1000 + 365 + 160 - 125 + daysFromStart.days // intro + spacer + left padding - 1/2 width of box
   const bottom = `50`
 
   return (

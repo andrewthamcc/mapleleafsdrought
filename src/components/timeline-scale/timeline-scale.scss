@@ -9,8 +9,8 @@
   &-spacer {
     background: #00488e;
     width: calc(
-      730px
-    ); // 730pixels is the two years in pixels hidden behind the spacer 3rem is half the width of the year span
+      365px
+    ); // 730pixels is the two years in pixels hidden behind the spacer
     float: left;
     height: 90%;
     top: 10%;
@@ -65,7 +65,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .time-ribbon {
+  .timeline-scale  {
     padding-right: 48rem;
 
     &-indicator {
@@ -75,15 +75,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .time-ribbon {
+  .timeline-scale {
     padding-right: 16rem;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .time-ribbon {
-    &-years-marker {
-      bottom: 5%;
-    }
   }
 }

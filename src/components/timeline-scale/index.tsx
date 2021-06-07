@@ -26,11 +26,11 @@ export const TimelineScale = () => {
     const windowLocation = e.target.scrollLeft
     const innerWindowWidth = document.body.clientWidth
 
-    // 1826 is width of intro + spacer + left padding + half width of indicator
-    if (windowLocation > 1866 - innerWindowWidth / 2) {
+    // 1501 is width of intro + spacer + left padding + half width of indicator
+    if (windowLocation > 1501 - innerWindowWidth / 2) {
       setShowDateIndicator(true)
 
-      const daysToAdd = windowLocation - (1866 - innerWindowWidth / 2)
+      const daysToAdd = windowLocation - (1501 - innerWindowWidth / 2)
       const currentDateIndicator = DateTime.fromJSDate(
         new Date('1/1/1967')
       ).plus({ days: daysToAdd })
@@ -50,7 +50,7 @@ export const TimelineScale = () => {
       <div className="timeline-scale-spacer" />
       <div
         className="timeline-scale-container"
-        style={{ width: `calc(730px + 123px + ${difference.days}px)` }} // 2 years + days until May 2 + days until now
+        style={{ width: `calc(365px + 123px + ${difference.days}px)` }} // 1 year (spacer width) + days until May 2 + days until now
       >
         <div className="timeline-scale-ruler" />
 
@@ -68,7 +68,7 @@ export const TimelineScale = () => {
             <span
               key={year}
               className="timeline-scale-years-marker"
-              style={{ left: `calc(${365 * (i + 2)}px - 3rem + 16rem)` }} // year + index - half width of span + padding width
+              style={{ left: `calc(${365 * (i + 1)}px - 3rem + 16rem)` }} // year + index - half width of span + padding width
             >
               {year}
             </span>

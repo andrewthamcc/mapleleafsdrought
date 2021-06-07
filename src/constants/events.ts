@@ -56,7 +56,7 @@ type EventDate = typeof eventDates[number]
 export const events: Record<EventDate, TimeEvent> = {
   '1967-05-02': {
     date: new Date('1967/05/02'),
-    title: '1967 Stanley Cup Champions',
+    title: 'Stanley Cup Champions',
   },
   '1971-09-01': {
     date: new Date('1971/09/01'),
@@ -220,7 +220,7 @@ export const events: Record<EventDate, TimeEvent> = {
   },
   '2016-10-12': {
     date: new Date('2016/10/12'),
-    title: `Matthew's 4 Goal Debut`,
+    title: `Matthews' 4 Goal Debut`,
   },
   '2018-07-01': {
     date: new Date('2017/07/01'),
