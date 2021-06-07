@@ -41,7 +41,7 @@ export const SEO: React.FC<Props> = ({
     metaImage && metaImage.src
       ? `${site.siteMetadata.url}${metaImage.src}`
       : null
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  const canonical = pathname ? `${site.siteMetadata.url}${pathname}` : null
 
   return (
     <Helmet
