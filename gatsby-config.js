@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Maple Leafs Drought`,
-    description: `What does the timeline of the Leafs look like if 1 day were equal to 1 pixel`,
+    description: `The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel`,
     author: `Andrew Tham`,
-    keywords: `maple leafs, leafs, hockey, toronto, nhl, playoffs, leaf, ice hockey, fans, stanley cup, playoffs, hockey team, mlse`,
+    keywords: `maple leafs, leafs, leafs drought, maple leafs drought, stanley cup, hockey, toronto, nhl, playoffs, leaf, ice hockey, fans, playoffs, hockey team, mlse`,
     url: 'http://mapleleafsdrought.com',
     image: `src/images/seo.png`,
   },

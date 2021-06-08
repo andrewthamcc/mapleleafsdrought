@@ -6,6 +6,7 @@ import './layout.scss'
 interface Props {
   showNav?: boolean
   title: string
+  to?: string
 }
 
 const imageQuery = graphql`
@@ -22,14 +23,19 @@ const imageQuery = graphql`
   }
 `
 
-const Layout: React.FC<Props> = ({ showNav = true, title, children }) => {
+const Layout: React.FC<Props> = ({
+  showNav = true,
+  title,
+  to = '/',
+  children,
+}) => {
   const { seoImage } = useStaticQuery(imageQuery)
 
   return (
     <>
       <SEO title={title} metaImage={seoImage.childImageSharp.resize} />
       <div className="layout">
-        <Header />
+        <Header to={to} />
         {showNav && <Nav />}
         <main className="main">{children}</main>
       </div>

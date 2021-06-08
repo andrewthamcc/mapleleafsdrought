@@ -1,4 +1,4 @@
-.home {
+.timer {
   flex-grow: 1;
 
   background-image: url('../images/city.jpeg');
@@ -24,7 +24,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .home {
+  .timer {
     background-size: cover;
     background-position: 90% 0%;
     background-attachment: scroll;

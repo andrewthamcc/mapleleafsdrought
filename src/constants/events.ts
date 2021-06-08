@@ -29,6 +29,7 @@ const eventDates = [
   '2003-03-13',
   '2003-08-29',
   '2004-03-15',
+  '2004-04-20',
   '2006-06-26',
   '2006-10-14',
   '2008-03-18',
@@ -122,7 +123,7 @@ export const events: Record<EventDate, TimeEvent> = {
   '1994-06-28': {
     date: new Date('1994/06/28'),
     title: 'Wendel Clark traded',
-    description: 'Leafs aquire future captain Mats Sundin',
+    description: 'Leafs aquire Mats Sundin',
   },
   '1999-02-13': {
     date: new Date('1999/02/13'),
@@ -155,7 +156,11 @@ export const events: Record<EventDate, TimeEvent> = {
   },
   '2004-03-15': {
     date: new Date('2004/03/15'),
-    title: 'Mogilny scores his 1000th point.',
+    title: 'Alexander Mogilny scores his 1000th point.',
+  },
+  '2004-04-20': {
+    date: new Date('2004/04/20'),
+    title: 'Last Playoff Win',
   },
   '2006-06-26': {
     date: new Date('2006/06/24'),

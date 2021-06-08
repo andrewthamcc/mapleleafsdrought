@@ -49,7 +49,7 @@ export const SEO: React.FC<Props> = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`${site.siteMetadata.title} | %s`}
       link={
         canonical
           ? [
