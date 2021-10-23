@@ -107,6 +107,7 @@ const IndexPage: React.FC = () => {
         <TimeLineEvent event={events['2020-02-22']} />
         <TimeLineEvent event={events['2020-08-01']} markerPosition={75} />
         <TimeLineEvent event={events['2021-05-31']} />
+        <TimeLineEvent event={events['2021-07-03']} />
       </div>
     </div>
   )

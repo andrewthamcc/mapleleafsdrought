@@ -50,6 +50,7 @@ const eventDates = [
   '2020-02-22',
   '2020-08-01',
   '2021-05-31',
+  '2021-07-03',
 ] as const
 
 type EventDate = typeof eventDates[number]
@@ -254,5 +255,10 @@ export const events: Record<EventDate, TimeEvent> = {
     date: new Date('2021/05/31'),
     title: 'Game 7 vs Montreal',
     description: 'Blow a 3-1 series lead',
+  },
+  '2021-07-03': {
+    date: new Date('2021/07/03'),
+    title: 'Longest Stanley Cup Drought',
+    description: '19,787 days breaking the record previously held by the Rangers'
   },
 }
