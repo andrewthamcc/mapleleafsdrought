@@ -21,6 +21,7 @@ const eventDates = [
   '1993-10-23',
   '1994-01-22',
   '1994-06-28',
+  '1996-11-10',
   '1999-02-13',
   '2000-02-06',
   '2000-04-27',
@@ -125,6 +126,11 @@ export const events: Record<EventDate, TimeEvent> = {
     date: new Date('1994/06/28'),
     title: 'Wendel Clark traded',
     description: 'Leafs aquire Mats Sundin',
+  },
+  '1996-11-10': {
+    date: new Date('1996/11/10'),
+    title: 'Potvin vs Hextall',
+    description: `"I know Felix doesn't think this is good idea"`,
   },
   '1999-02-13': {
     date: new Date('1999/02/13'),

@@ -66,6 +66,7 @@ const IndexPage: React.FC = () => {
         />
         <TimeLineEvent event={events['1994-01-22']} markerPosition={45} />
         <TimeLineEvent event={events['1994-06-28']} markerPosition={60} />
+        <TimeLineEvent event={events['1996-11-10']} />
         <TimeLineEvent event={events['1999-02-13']} />
         <TimeLineEvent event={events['2000-02-06']} markerPosition={75} />
         <TimeLineEvent event={events['2000-04-27']} markerPosition={30} />
