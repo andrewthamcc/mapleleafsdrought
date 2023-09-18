@@ -60,19 +60,20 @@ export const TimelineEvent = ({ date, event }: Props) => {
     >
       <div className="flex flex-col items-center justify-center text-center">
         {event.icon ? (
-          <img className="h-10" src={event.icon.src} />
-          ) : (
+          <img aria-hidden="true" className="h-10" src={event.icon.src} />
+        ) : (
           <img
+            aria-hidden="true"
             src={EventMarker.src}
-            className={`time-event-marker transition-all hover:scale-125 duration-500 ${
+            className={`time-event-marker transition-all duration-500 hover:scale-125 ${
               showDescription && 'scale-125'
             }`}
           />
         )}
-        <p className="my-2 font-[Oswald] text-sm text-shadow-sm">
+        <p className="text-shadow-sm my-2 font-[Oswald] text-sm">
           {date.toLocaleDateString()}
         </p>
-        <p className="text-lg text-shadow-sm">{event.title}</p>
+        <p className="text-shadow-sm text-lg">{event.title}</p>
         <p
           className={`text-xs transition-all duration-500 ${
             !showDescription ? 'opacity-0' : 'opacity-100'

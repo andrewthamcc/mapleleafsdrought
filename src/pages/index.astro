@@ -2,7 +2,6 @@
 import { Image } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
 import ArrowRight from '../images/arrow-right.svg'
-import ArrowRightShort from '../images/arrow-right-short.svg'
 import PixelImage from '../images/pixel.svg'
 import { TimelineScale } from '../components/timeline-scale'
 import { TimelineEvent } from '../components/timeline-event'
@@ -29,9 +28,8 @@ import { eventDates, events } from '../constants/events'
         scroll to explore
       </p>
       <div class="flex items-center">
-        <Image alt="arrow right" src={ArrowRight} />
-        <Image class="hidden" alt="arrow right" src={ArrowRightShort} />
-        <Image alt="pixel" src={PixelImage} />
+        <Image aria-hidden="true" alt="arrow-right" src={ArrowRight} />
+        <Image aria-hidden="true" alt="pixel image" src={PixelImage} />
       </div>
     </div>
   </div>

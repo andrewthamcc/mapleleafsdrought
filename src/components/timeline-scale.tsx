@@ -73,7 +73,7 @@ export const TimelineScale = () => {
           style={{ left: 'calc(50% - 5rem)' }}
         >
           <span>{dateIndicator}</span>
-          <img className="h-5 w-[10rem]" src={CaretDown.src} />
+          <img aria-hidden="true" className="h-5 w-[10rem]" src={CaretDown.src} />
         </div>
         <div className="absolute bottom-[4%] font-[Oswald]">
           {getYears(1967, new Date().getFullYear()).map((year, i) => (
