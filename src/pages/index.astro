@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import ArrowRight from '../images/arrow-right.svg'
+import ArrowRightShort from '../images/arrow-right-short.svg'
+import PixelImage from '../images/pixel.svg'
+import { TimelineScale } from '../components/timeline-scale'
+import { TimelineEvent } from '../components/timeline-event'
+import { eventDates, events } from '../constants/events'
+---
+
+<Layout title="Maple Leafs Drought">
+  <div
+    class="float-left flex h-full w-[350px] flex-col p-8 md:w-[800px] md:justify-center md:p-20 lg:w-[1000px]"
+  >
+    <h2 class="text-shadow-md mb-6 font-[Oswald] text-5xl md:text-8xl">
+      1967 - Present
+    </h2>
+
+    <p
+      class="text-shadow-sm lg:leading-xl leading-md lg:leading-lg w-[90%] font-[Sintony] text-2xl md:text-6xl"
+    >
+      The timeline of the Toronto Maple Leafs since their last Stanley Cup if
+      one day were equal to 1 pixel
+    </p>
+
+    <div class="mt-auto">
+      <p class="text-shadow-sm text-xs uppercase tracking-[5px]">
+        scroll to explore
+      </p>
+      <div class="flex items-center">
+        <Image alt="arrow right" src={ArrowRight} />
+        <Image class="hidden" alt="arrow right" src={ArrowRightShort} />
+        <Image alt="pixel" src={PixelImage} />
+      </div>
+    </div>
+  </div>
+
+  <TimelineScale client:only="react" />
+  {
+    eventDates.map((event) => (
+      <TimelineEvent
+        client:only="react"
+        date={new Date(event)}
+        event={events[event]}
+      />
+    ))
+  }
+</Layout>

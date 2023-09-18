@@ -1,0 +1,16 @@
+<svg width="365" height="30" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <line stroke-width="2"  id="svg_1" y2="30" x2="0" y1="5" x1="0" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_2" y2="30" x2="31" y1="20" x1="31" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_3" y2="30" x2="59" y1="20" x1="59" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_4" y2="30" x2="90" y1="20" x1="90" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_5" y2="30" x2="120" y1="20" x1="120" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_6" y2="30" x2="151" y1="20" x1="151" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_7" y2="30" x2="181" y1="20" x1="181" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_8" y2="30" x2="212" y1="20" x1="212" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_9" y2="30" x2="243" y1="20" x1="243" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_10" y2="30" x2="273" y1="20" x1="273" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_11" y2="30" x2="304" y1="20" x1="304" stroke="#ffffff"/>
+  <line stroke-width="1" id="svg_12" y2="30" x2="334" y1="20" x1="334" stroke="#ffffff"/>
+ </g>
+</svg>

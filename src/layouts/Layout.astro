@@ -1,0 +1,68 @@
+---
+import { Image } from 'astro:assets'
+import '@fontsource/open-sans'
+import '@fontsource/oswald'
+import '@fontsource/sintony'
+import LeafLogo from '../images/leaf.svg'
+import '../style/text-shadow.css'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+
+const isBrowser = typeof window !== 'undefined'
+---
+
+<!doctype html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="title" content="Maple Leafs Drought" />
+  <meta name="author" content="Andrew Tham, hello@andrewtham.cc" />
+  <meta
+    name="description"
+    content="The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel"
+  />
+  <meta
+    name="keywords"
+    content="maple leafs, leafs, leafs drought, maple leafs drought, stanley cup, hockey, toronto, nhl, playoffs, leaf, ice hockey, fans, playoffs, hockey team, mlse"
+  />
+
+  <meta property="og:title" content="Maple Leafs Drought" />
+  <meta
+    property="og:description"
+    content="The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel"
+  />
+  <meta property="og:image" content="https://www.mapleleafsdrought.cc/seo.png" />
+  <meta property="og:url" content="https://www.mapleleafsdrought.cc" />
+  <title>{title}</title>
+
+  <body class="flex h-screen flex-col bg-leafs-blue text-white">
+    <header class="z-50 items-center gap-4 bg-leafs-blue py-6 shadow-xl">
+      <div class="mx-auto flex w-[90%] items-center gap-4">
+        <Image
+          class="h-[3rem] w-[3rem]"
+          alt="Maple Leafs logo"
+          src={LeafLogo}
+        />
+        <h1
+          class="tracking-wides text-2xl uppercase tracking-widest md:text-4xl"
+        >
+          Leafs Forever
+        </h1>
+      </div>
+    </header>
+  </body>
+  <main
+    class="relative overflow-x-auto"
+    style={{
+      height: `${isBrowser ? window.innerHeight + 'px' : '100vh'}`,
+    }}
+  >
+    <slot />
+  </main>
+</html>
