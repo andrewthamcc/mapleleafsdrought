@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      scale: 'url(./src/images/time-scale.svg)',
+      scale: 'url(/time-scale.svg)',
     },
   },
   plugins: [],
