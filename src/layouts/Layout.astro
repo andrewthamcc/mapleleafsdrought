@@ -11,8 +11,6 @@ interface Props {
 }
 
 const { title } = Astro.props
-
-const isBrowser = typeof window !== 'undefined'
 ---
 
 <!doctype html>
@@ -37,7 +35,10 @@ const isBrowser = typeof window !== 'undefined'
     property="og:description"
     content="The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel"
   />
-  <meta property="og:image" content="https://www.mapleleafsdrought.cc/seo.png" />
+  <meta
+    property="og:image"
+    content="https://www.mapleleafsdrought.cc/seo.png"
+  />
   <meta property="og:url" content="https://www.mapleleafsdrought.cc" />
   <title>{title}</title>
 
@@ -57,12 +58,7 @@ const isBrowser = typeof window !== 'undefined'
       </div>
     </header>
   </body>
-  <main
-    class="relative overflow-x-auto"
-    style={{
-      height: `${isBrowser ? window.innerHeight + 'px' : '100vh'}`,
-    }}
-  >
+  <main class="relative h-screen overflow-x-auto">
     <slot />
   </main>
 </html>

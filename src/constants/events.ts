@@ -50,13 +50,17 @@ export const eventDates = [
   '2014/04/14',
   '2016/06/24',
   '2016/10/12',
+  '2016/10/15',
   '2017/12/09',
   '2018/07/01',
   '2019/06/13',
+  '2019/11/25',
   '2020/02/22',
   '2020/08/01',
+  '2021/05/20',
   '2021/05/31',
   '2021/07/03',
+  '2021/10/01',
   '2022/04/26',
   '2023/04/29',
 ] as const
@@ -216,7 +220,12 @@ export const events: Record<EventDate, TimeEvent> = {
   },
   '2016/10/12': {
     title: `Matthews' 4 goal debut`,
-    position: 65,
+    position: 60,
+  },
+  '2016/10/15': {
+    title: 'Leafs decide to retire 17 players numbers',
+    description: '1, 4, 5, 6, 7, 9, 10, 13, 14, 17, 21, 27, 93',
+    position: 80,
   },
   '2018/07/01': {
     title: `John Tavares signs`,
@@ -229,6 +238,11 @@ export const events: Record<EventDate, TimeEvent> = {
     title: `NBA Champions`,
     icon: Raptors,
   },
+  '2019/11/25': {
+    title: `Marner confirms Babcock report`,
+    description: 'List of laziest player from Marner then shared with team',
+    position: 80,
+  },
   '2020/02/22': {
     title: 'David Ayres',
     description:
@@ -237,7 +251,11 @@ export const events: Record<EventDate, TimeEvent> = {
   '2020/08/01': {
     title: 'NHL COVID-19 bubble',
     description: 'Toronto is chosen as one of two bubble cities',
-    position: 75,
+    position: 70,
+  },
+  '2021/05/20': {
+    title: 'Tavares stretchered off ice',
+    position: 30,
   },
   '2021/05/31': {
     title: 'Game 7 vs Montreal',
@@ -248,7 +266,12 @@ export const events: Record<EventDate, TimeEvent> = {
     title: 'Longest Stanley Cup drought',
     description:
       '19,787 days breaking the record previously held by the Rangers',
-    position: 40,
+    position: 45,
+  },
+  '2021/10/01': {
+    title: 'All or Nothing',
+    description: 'Amazon Prime documentary',
+    position: 80,
   },
   '2022/04/26': {
     title: 'AM34 scores 60',
