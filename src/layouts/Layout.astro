@@ -15,32 +15,61 @@ const { title } = Astro.props
 
 <!doctype html>
 <html lang="en">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="generator" content={Astro.generator} />
-  <meta name="title" content="Maple Leafs Drought" />
-  <meta name="author" content="Andrew Tham, hello@andrewtham.cc" />
-  <meta
-    name="description"
-    content="The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel"
-  />
-  <meta
-    name="keywords"
-    content="maple leafs, leafs, leafs drought, maple leafs drought, stanley cup, hockey, toronto, nhl, playoffs, leaf, ice hockey, fans, playoffs, hockey team, mlse"
-  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://www.mapleleafsdrought.com" />
+    <meta name="author" content="Andrew Tham, hello@andrewtham.cc" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="title" content="Maple Leafs Drought" />
+    <meta
+      name="description"
+      content="The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel"
+    />
+    <meta
+      name="keywords"
+      content="toronto maple leafs history, leafs stats, leafs stanley cup, leafs analytics"
+    />
 
-  <meta property="og:title" content="Maple Leafs Drought" />
-  <meta
-    property="og:description"
-    content="The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel"
-  />
-  <meta
-    property="og:image"
-    content="https://www.mapleleafsdrought.com/seo.png"
-  />
-  <meta property="og:url" content="https://www.mapleleafsdrought.com" />
-  <title>{title}</title>
+    <meta property="og:title" content="Maple Leafs Drought" />
+    <meta
+      property="og:description"
+      content="The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel"
+    />
+    <meta
+      property="og:image"
+      content="https://www.mapleleafsdrought.com/seo.png"
+    />
+    <meta property="og:url" content="https://www.mapleleafsdrought.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Maple Leafs Drought",
+        "url": "https://www.mapleleafsdrought.com",
+        "description": "The timeline of the Toronto Maple Leafs since their last Stanley Cup if one day were equal to 1 pixel",
+        "author": {
+          "@type": "Person",
+          "name": "Andrew Tham",
+          "email": "hello@andrewtham.cc"
+        },
+        "image": "https://www.mapleleafsdrought.com/seo.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Maple Leafs Drought",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.mapleleafsdrought.com/favicon.svg"
+          }
+        }
+      }
+    </script>
+    <title>{title}</title>
+  </head>
 
   <body class="flex h-screen flex-col bg-leafs-blue text-white">
     <header class="z-50 items-center gap-4 bg-leafs-blue py-6 shadow-xl">
