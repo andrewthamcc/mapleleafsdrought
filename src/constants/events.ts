@@ -64,6 +64,7 @@ export const eventDates = [
   '2022/04/26',
   '2023/04/29',
   '2024/08/14',
+  '2025/05/22',
 ] as const
 
 type EventDate = (typeof eventDates)[number]
@@ -285,6 +286,9 @@ export const events: Record<EventDate, TimeEvent> = {
   },
   '2024/08/14': {
     title: 'Matthews named Captain',
-    description: 'Tavares steps down.',
+    description: 'Tavares steps down',
+  },
+  '2025/05/22': {
+    title: 'MLSE parts with Shanahan',
   },
 }
