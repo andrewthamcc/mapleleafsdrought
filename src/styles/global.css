@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-leafs-blue: #00488e;
+  --color-white: #ffffff;
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --leading-md: 4rem;
+  --leading-xl: 6rem;
+  --background-image-scale: url('/time-scale.svg');
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 1px #090909;
+}
+
+.text-shadow-md {
+  text-shadow: 2px 2px #090909;
+}
