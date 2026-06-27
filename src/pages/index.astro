@@ -5,7 +5,7 @@ import ArrowRight from '../images/arrow-right.svg'
 import PixelImage from '../images/pixel.svg'
 import { TimelineScale } from '../components/timeline-scale'
 import { TimelineEvent } from '../components/timeline-event'
-import { eventDates, events } from '../constants/events'
+import { events } from '../constants/events'
 ---
 
 <Layout title="Maple Leafs Drought">
@@ -36,11 +36,11 @@ import { eventDates, events } from '../constants/events'
 
   <TimelineScale client:only="react" />
   {
-    eventDates.map((event) => (
+    Object.entries(events).map(([eventDate, event]) => (
       <TimelineEvent
         client:only="react"
-        date={new Date(event)}
-        event={events[event]}
+        date={new Date(eventDate)}
+        event={event}
       />
     ))
   }
