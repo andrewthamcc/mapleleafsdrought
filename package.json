@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
-    "@astrojs/tailwind": "^6.0.2",
     "@fontsource/open-sans": "^5.0.12",
     "@fontsource/oswald": "^5.0.12",
     "@fontsource/sintony": "^5.0.12",
